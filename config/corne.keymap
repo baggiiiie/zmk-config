@@ -51,7 +51,7 @@
 
             bindings = <
 &kp TAB     &kp EXCL      &kp AT        &kp HASH          &kp DLLR           &kp PRCNT    &kp CARET  &kp AMPS       &kp KP_MULTIPLY  &kp SEMI   &kp COLON          &trans
-&kp DELETE  &trans        &trans        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans       &kp LEFT   &kp DOWN       &kp UP           &kp RIGHT  &kp SINGLE_QUOTE   &trans
+&trans      &kp DELETE    &trans        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans       &kp LEFT   &kp DOWN       &kp UP           &kp RIGHT  &kp SINGLE_QUOTE   &trans
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &trans            &trans             &trans       &kp END    &kp PAGE_DOWN  &kp PAGE_UP      &kp HOME   &kp DOUBLE_QUOTES  &trans
                                         &kp LGUI          &trans             &kp SPACE    &kp RET    &trans         &kp RALT
             >;
@@ -59,10 +59,10 @@
 
         layer_3 {
             bindings = <
-&trans  &kp F1  &kp F2                &trans                    &trans         &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp C_BRIGHTNESS_DEC  &kp LG(C_BRIGHTNESS_INC)  &kp LG(MINUS)  &kp LG(PLUS)    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP           &kp C_MUTE     &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                                      &trans                    &trans         &trans          &trans  &trans  &trans
+&kp F11  &kp F1          &kp F2                &kp F3                &kp F4          &kp F5            &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F12
+&trans   &trans          &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LG(MINUS)   &kp LG(PLUS)      &trans  &trans  &trans  &trans  &trans   &trans
+&trans   &kp LS(LG(N1))  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_MUTE      &trans            &trans  &trans  &trans  &trans  &trans   &kp C_RESET
+                                               &kp LS(LG(N2))        &kp LS(LG(N3))  &kp LS(LG(N4))    &trans  &trans  &trans
             >;
         };
     };
