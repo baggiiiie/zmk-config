@@ -36,7 +36,7 @@
 
             bindings = <
 &kp F11      &kp F1          &kp F2                &kp F3                &kp F4          &kp F5            &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F12
-&bootloader  &trans          &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LG(MINUS)   &kp LG(PLUS)      &trans  &trans  &trans  &trans  &trans   &trans
+&bootloader  &trans          &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LG(MINUS)   &kp LG(PLUS)      &trans  &trans  &trans  &mwh SCROLL_UP  &mmv MOVE_UP   &mkp LCLK
 &trans       &kp LS(LG(N1))  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_MUTE      &trans            &trans  &trans  &trans  &trans  &trans   &bootloader
                                                    &kp LS(LG(N2))        &kp LS(LG(N3))  &kp LS(LG(N4))    &trans  &trans  &trans
             >;
