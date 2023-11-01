@@ -46,7 +46,7 @@
         layer_3 {
             bindings = <
 &kp F11      &kp F1          &kp F2                &kp F3                &kp F4          &kp F5            &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F12
-&bootloader  &trans          &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LG(MINUS)   &kp LG(PLUS)       &mwh SCROLL_RIGHT &mwh SCROLL_DOWN  &mwh SCROLL_UP &mwh SCROLL_LEFT  &trans   &trans
+&bootloader  &trans          &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LG(MINUS)   &kp LG(PLUS)       &mwh SCROLL_RIGHT &mwh SCROLL_UP &mwh SCROLL_DOWN  &mwh SCROLL_LEFT  &trans   &trans
 &trans       &kp LS(LG(N1))  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_MUTE      &trans            &trans  &trans  &trans  &trans  &trans   &bootloader
                                                    &kp LS(LG(N2))        &kp LS(LG(N3))  &kp LS(LG(N4))    &trans  &trans  &trans
             >;
