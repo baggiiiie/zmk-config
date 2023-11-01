@@ -18,7 +18,7 @@
             bindings = <
 &kp TAB     &kp Q  &kp W  &kp F     &kp P  &kp B        &kp J          &kp L  &kp U           &kp Y    &kp APOSTROPHE  &kp LEFT_CONTROL
 &kp ESCAPE  &kp A  &kp R  &kp S     &kp T  &kp G        &kp M          &kp N  &kp E           &kp I    &kp O           &kp ENTER
-&mo 3       &kp Z  &kp X  &kp C     &kp D  &kp V        &kp K          &kp H  &kp COMMA       &kp DOT  &kp FSLH        &kp LEFT_ALT
+&mo 3       &kp Z  &kp X  &kp C     &kp D  &kp V        &kp K          &kp H  &kp COMMA       &kp DOT  &kp FSLH        &mo 4
                           &kp LGUI  &mo 1  &kp SPACE    &kp BACKSPACE  &mo 2  &kp LEFT_SHIFT
             >;
         };
@@ -46,9 +46,18 @@
         layer_3 {
             bindings = <
 &kp F11      &kp F1          &kp F2                &kp F3                &kp F4          &kp F5            &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F12
-&bootloader  &trans          &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LG(MINUS)   &kp LG(PLUS)      &trans  &trans  &trans  &trans  &trans   &mkp LCLK
+&bootloader  &trans          &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LG(MINUS)   &kp LG(PLUS)       &mwh SCROLL_RIGHT &mwh SCROLL_DOWN  &mwh SCROLL_UP &mwh SCROLL_LEFT  &trans   &trans
 &trans       &kp LS(LG(N1))  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_MUTE      &trans            &trans  &trans  &trans  &trans  &trans   &bootloader
                                                    &kp LS(LG(N2))        &kp LS(LG(N3))  &kp LS(LG(N4))    &trans  &trans  &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans       &trans          &trans                &mmv MOVE_UP                &trans          &trans            &trans  &trans  &trans  &trans  &trans   &trans
+&trans       &trans          &mmv MOVE_LEFT        &mmv MOVE_DOWN        &mmv MOVE_RIGHT          &trans         &trans  &trans  &trans  &trans  &trans   &trans
+&trans       &trans          &trans                &trans                &trans          &trans            &trans  &trans  &trans  &trans  &trans   &trans
+                                                   &trans        &mkp RCLK  &mkp LCLK    &trans  &trans  &trans
             >;
         };
     };
