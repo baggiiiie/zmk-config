@@ -17,9 +17,9 @@
 
             bindings = <
 &kp TAB     &kp Q  &kp W  &kp F     &kp P  &kp B        &kp J          &kp L  &kp U           &kp Y    &kp APOSTROPHE  &kp LG(SPACE)
-&kp ESCAPE  &kp A  &kp R  &kp S     &kp T  &kp G        &kp M          &kp N  &kp E           &kp I    &kp O           &kp ENTER
+&mt LALT ESCAPE  &kp A  &kp R  &kp S     &kp T  &kp G        &kp M          &kp N  &kp E           &kp I    &kp O           &kp ENTER
 &mo 3       &kp Z  &kp X  &kp C     &kp D  &kp V        &kp K          &kp H  &kp COMMA       &kp DOT  &kp FSLH        &mo 4
-                          &kp LGUI  &mo 1  &kp SPACE    &kp LEFT_SHIFT  &lt 0 BACKSPACE  &kp LEFT_CONTROL
+                          &kp LGUI  &mo 1  &kp SPACE    &kp LEFT_SHIFT  &lt 2 BACKSPACE  &kp LEFT_CONTROL
             >;
         };
 
@@ -38,7 +38,7 @@
             bindings = <
 &kp TAB     &kp EXCL      &kp AT        &kp HASH          &kp DLLR           &kp PRCNT    &kp CARET  &kp AMPS       &kp KP_MULTIPLY  &kp SEMI   &kp COLON          &trans
 &trans      &kp DELETE    &trans        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans       &kp LEFT   &kp DOWN       &kp UP           &kp RIGHT  &kp SINGLE_QUOTE   &trans
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &trans            &trans             &trans       &kp END    &kp PAGE_DOWN  &kp PAGE_UP      &kp HOME   &kp DOUBLE_QUOTES  &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &trans             &trans       &kp END    &kp PAGE_DOWN  &kp PAGE_UP      &kp HOME   &kp DOUBLE_QUOTES  &trans
                                         &trans            &trans             &trans       &trans     &trans         &trans
             >;
         };
