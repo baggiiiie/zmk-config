@@ -10,7 +10,7 @@
 #include <dt-bindings/zmk/mouse.h>
 
 #define MO_TOG(layer) &mo_tog layer layer
-#define T_MEH(keycode) &t_meh keycode LS(LALT(LCTRL))
+#define T_MEH(keycode) &t_meh keycode LS(LALT(keycode))
 
 / {
 
@@ -23,7 +23,7 @@
             tapping-term-ms = <200>;
             bindings = <&mo>, <&tog>;
         };
-        t_meh:behavior_t_meh {
+        t_meh: behavior_t_meh {
             compatible = "zmk,behavior-hold-tap";
             label = "t_meh";
             #binding-cells = <2>;
@@ -42,7 +42,7 @@
 &kp LGUI         &kp Q    &kp W    &kp F    &kp P           &kp B    &kp J        &kp L         &kp U         &kp Y      &kp SQT     &kp LG(SPACE)
 &mt LCTRL ESC    &kp A    &kp R    &kp S    &mt LGUI T      &kp G    &kp M        &mt RGUI N    &kp E         &kp I      &kp O       &kp ENTER
 &mo 3            &kp Z    &kp X    &kp C    &kp D           &kp V    &kp K        &kp H         &kp COMMA     &kp DOT    &kp FSLH    &mo_tog 4 4
-                                   &mt LALT TAB    &mo 1    &t_meh SPACE    &kp LSHFT     &lt 2 BSPC    &mt LCTRL ESC
+                                   &mt LALT TAB    &mo 1    &t_meh LCTRL SPACE    &kp LSHFT     &lt 2 BSPC    &mt LCTRL ESC
             >;
         };
 
