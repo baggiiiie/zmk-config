@@ -5,9 +5,9 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
 
 #define MEH LS(LC(LALT))
 
@@ -15,7 +15,6 @@
 #define T_MEH(keycode) &t_meh keycode keycode
 
 / {
-
     behaviors {
         mo_tog: behavior_mo_tog {
             compatible = "zmk,behavior-hold-tap";
@@ -31,7 +30,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            bindings = <&kp>, <&kp>; 
+            bindings = <&kp>, <&kp>;
         };
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -57,50 +56,47 @@
         compatible = "zmk,keymap";
 
         default_layer {
-
             bindings = <
-&kp LG(C)    &kp Q    &kp W    &kp F    &kp P           &kp B    &kp J        &kp L         &kp U         &kp Y      &kp SQT     &kp LG(SPACE)
-&kp LG(V)    &kp A    &kp R    &kp S    &hm LGUI T      &kp G    &kp M        &hm RGUI N    &kp E         &kp I      &kp O       &kp ENTER
-&mo 3        &kp Z    &kp X    &kp C    &kp D           &kp V    &kp K        &kp H         &kp COMMA     &kp DOT    &kp FSLH    &mo_tog 4 4
-                               &mt LALT TAB    &mo 1    &t_meh MEH SPACE    &kp LSHFT     &lt 2 BSPC    &mt LCTRL ESC
+&kp LG(C)  &kp Q  &kp W  &kp F         &kp P       &kp B               &kp J      &kp L       &kp U          &kp Y    &kp SQT   &kp LG(SPACE)
+&kp LG(V)  &kp A  &kp R  &kp S         &hm LGUI T  &kp G               &kp M      &hm RGUI N  &kp E          &kp I    &kp O     &kp ENTER
+&mo 3      &kp Z  &kp X  &kp C         &kp D       &kp V               &kp K      &kp H       &kp COMMA      &kp DOT  &kp FSLH  &mo_tog 4 4
+                         &mt LALT TAB  &mo 1       &t_meh MEH SPACE    &kp LSHFT  &lt 2 BSPC  &mt LCTRL ESC
             >;
         };
 
         lower_layer {
-
             bindings = <
-&kp GRAVE    &kp LS(GRAVE)    &kp LS(LBKT)     &kp LBRC       &kp RBRC       &kp PIPE     &kp PLUS     &kp N7    &kp N8    &kp N9    &kp STAR    &trans
-&trans       &kp LA(DEL)      &kp LG(GRAVE)    &kp LPAR       &kp RPAR       &kp UNDER    &kp MINUS    &kp N4    &kp N5    &kp N6    &kp N0      &trans
-&trans       &kp LC(N1)       &kp LC(N2)       &kp LC(TAB)    &kp LG(TAB)    &kp BSLH     &kp EQUAL    &kp N1    &kp N2    &kp N3    &trans      &trans
-                                               &trans         &trans         &trans       &trans       &kp LA(BSPC)  &kp DOT
+&kp GRAVE  &kp LS(GRAVE)  &kp LS(LBKT)   &kp LBRC     &kp RBRC     &kp PIPE     &kp PLUS   &kp N7        &kp N8   &kp N9  &kp STAR  &trans
+&trans     &kp LA(DEL)    &kp LG(GRAVE)  &kp LPAR     &kp RPAR     &kp UNDER    &kp MINUS  &kp N4        &kp N5   &kp N6  &kp N0    &trans
+&trans     &kp LC(N1)     &kp LC(N2)     &kp LC(TAB)  &kp LG(TAB)  &kp BSLH     &kp EQUAL  &kp N1        &kp N2   &kp N3  &trans    &trans
+                                         &trans       &trans       &trans       &trans     &kp LA(BSPC)  &kp DOT
             >;
         };
 
         raise_layer {
-
             bindings = <
-&trans    &kp EXCL    &kp AT    &kp HASH    &kp DLLR    &kp PRCNT    &kp CARET    &kp AMPS         &kp KP_MULTIPLY    &kp SEMI     &kp COLON    &trans
-&trans    &kp DEL     &trans    &kp LBKT    &kp RBRC    &trans       &ht LA(LEFT) LEFT     &kp DOWN         &kp UP             &ht LA(RIGHT) RIGHT    &kp SQT      &trans
-&trans    &trans      &trans    &trans      &trans      &trans       &kp END      &kp PAGE_DOWN    &kp PAGE_UP        &kp HOME     &kp DQT      &trans
-                                &trans      &trans      &trans       &trans       &trans           &trans
+&trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET          &kp AMPS       &kp KP_MULTIPLY  &kp SEMI             &kp COLON  &trans
+&trans  &kp DEL   &trans  &kp LBKT  &kp RBKT  &kp SQT      &ht LA(LEFT) LEFT  &kp DOWN       &kp UP           &ht LA(RIGHT) RIGHT  &kp SQT    &trans
+&trans  &trans    &trans  &trans    &kp DQT   &trans       &kp END            &kp PAGE_DOWN  &kp PAGE_UP      &kp HOME             &kp DQT    &trans
+                          &trans    &trans    &trans       &trans             &trans         &trans
             >;
         };
 
         layer_3 {
             bindings = <
-&kp F11         &kp F1              &kp F2                &kp F3                &kp F4          &kp F5            &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F12
-&bootloader     &trans              &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LG(MINUS)   &kp LG(PLUS)      &mwh SCROLL_RIGHT &mwh SCROLL_UP &mwh SCROLL_DOWN  &mwh SCROLL_LEFT  &trans   &trans
-&trans          &kp LS(LG(N1))      &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_MUTE      &trans            &trans  &trans  &trans  &trans  &trans   &bootloader
-                                                          &kp LS(LG(N2))        &kp LS(LG(N3))  &kp LS(LG(N4))    &trans  &trans  &trans
+&kp F11      &kp F1          &kp F2                &kp F3                &kp F4          &kp F5            &kp F6             &kp F7          &kp F8            &kp F9            &kp F10  &kp F12
+&bootloader  &trans          &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LG(MINUS)   &kp LG(PLUS)      &mwh SCROLL_RIGHT  &mwh SCROLL_UP  &mwh SCROLL_DOWN  &mwh SCROLL_LEFT  &trans   &trans
+&trans       &kp LS(LG(N1))  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_MUTE      &kp C_PLAY        &trans             &trans          &trans            &trans            &trans   &bootloader
+                                                   &kp LS(LG(N2))        &kp LS(LG(N3))  &kp LS(LG(N4))    &trans             &trans          &trans
             >;
         };
 
         layer_4 {
             bindings = <
-&trans       &trans          &mwh SCROLL_DOWN      &mmv MOVE_UP          &mwh SCROLL_UP           &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &trans          &mmv MOVE_LEFT        &mmv MOVE_DOWN        &mmv MOVE_RIGHT          &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&bt BT_CLR   &bt BT_SEL 0    &bt BT_SEL 1          &bt BT_SEL 2          &bt BT_SEL 3             &bt BT_SEL 4      &trans  &trans  &trans  &trans  &trans  &trans
-                                                   &trans                &mkp RCLK                &mkp LCLK         &trans  &trans  &trans
+&trans      &trans        &mwh SCROLL_DOWN  &mmv MOVE_UP    &mwh SCROLL_UP   &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans        &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2    &bt BT_SEL 3     &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
+                                            &trans          &mkp RCLK        &mkp LCLK       &trans  &trans  &trans
             >;
         };
     };
