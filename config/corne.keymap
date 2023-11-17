@@ -10,9 +10,12 @@
 #include <dt-bindings/zmk/keys.h>
 
 #define MEH LS(LC(LALT))
+#define _BT_SEL_KEYS_ &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
+#define _MEDIA_CONTROL_ &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_MUTE      &kp C_PLAY
+#define _HOME_ROW_SCROLL_ &mwh SCROLL_RIGHT  &mwh SCROLL_UP  &mwh SCROLL_DOWN  &mwh SCROLL_LEFT  
+#define _HOME_ROW_ARROW_ &ht LA(LEFT) LEFT  &kp DOWN    &kp UP     &ht LA(RIGHT) RIGHT
+#define _BRIGHTNESS_CONTROL_  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  
 
-#define MO_TOG(layer) &mo_tog layer layer
-#define T_MEH(keycode) &t_meh keycode keycode
 
 / {
     behaviors {
@@ -86,11 +89,11 @@
         raise_layer {
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-    &trans        &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT      &kp CARET     &kp AMPS      &kp KP_MULTIPLY  &kp SEMI   &kp COLON     &trans
+    &trans        &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT      &kp CARET     &kp AMPS      &kp STAR      &kp SEMI      &kp COLON     &trans
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &trans        &kp DEL       &trans        &kp LBKT      &kp RBKT      &kp SQT        &ht LA(LEFT) LEFT  &kp DOWN    &kp UP     &ht LA(RIGHT) RIGHT  &kp SQT    &trans
+    &trans        &kp DEL       &trans        &kp LBKT      &kp RBKT      &kp SQT                             _HOME_ROW_ARROW_                   &kp SQT       &trans
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &trans        &trans        &trans        &kp LSHFT     &kp LGUI      &kp DQT        &kp END       &kp PAGE_DOWN  &kp PAGE_UP     &kp HOME   &kp DQT        &trans
+    &trans        &trans        &kp LCRTL     &kp LSHFT     &kp LGUI      &kp DQT        &kp END       &kp PAGE_DOWN  &kp PAGE_UP     &kp HOME   &kp DQT       &trans
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                               &trans        &trans        &trans         &trans        &trans         &trans
 //                                           ╰─────────────┴─────────────┴─────────────╯╰─────────────┴─────────────┴─────────────╯
@@ -102,9 +105,9 @@
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
     &kp F11       &kp F1        &kp F2        &kp F3        &kp F4        &kp F5         &kp F6        &kp F7        &kp F8        &kp F9        &kp F10       &kp F12
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &bootloader   &trans        &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LG(MINUS)   &kp LG(PLUS)      &mwh SCROLL_RIGHT  &mwh SCROLL_UP  &mwh SCROLL_DOWN  &mwh SCROLL_LEFT  &trans   &trans
+    &bootloader   &trans            _BRIGHTNESS_CONTROL_    &kp LG(MINUS)   &kp LG(PLUS)                      _HOME_ROW_SCROLL_                  &trans        &trans
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &trans        &kp LS(LG(N1))  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_MUTE      &kp C_PLAY        &trans             &trans          &trans            &trans            &trans   &bootloader
+    &trans        &kp LS(LG(N1))                  _MEDIA_CONTROL_                        &trans        &trans        &trans        &trans        &trans        &bootloader
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                               &kp LS(LG(N2))        &kp LS(LG(N3))  &kp LS(LG(N4))    &trans             &trans          &trans
 //                                           ╰─────────────┴─────────────┴─────────────╯╰─────────────┴─────────────┴─────────────╯
@@ -114,11 +117,11 @@
         layer_4 {
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-    &trans        &trans        &mwh SCROLL_DOWN  &mmv MOVE_UP    &mwh SCROLL_UP   &trans          &trans  &trans  &trans  &trans  &trans  &trans
+    &trans        &trans     &mwh SCROLL_DOWN  &mmv MOVE_UP    &mwh SCROLL_UP   &trans                                  _BT_SEL_KEYS_
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &trans        &trans        &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+    &trans        &trans     &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans    &trans        &trans        &trans        &trans        &trans        &trans
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3   &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
+    &trans        &trans        &trans        &trans        &trans        &trans          &trans        &trans        &trans        &trans        &trans        &trans
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                               &trans        &mkp RCLK     &mkp LCLK       &trans       &trans        &trans
 //                                           ╰─────────────┴─────────────┴─────────────╯╰─────────────┴─────────────┴─────────────╯
