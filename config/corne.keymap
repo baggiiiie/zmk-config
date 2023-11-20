@@ -65,10 +65,10 @@
             flavor = "hold-preferred";
             bindings = <&mo>, <&kp>;
         };
-        &sk {
-                release-after-ms = <2000>;
-                quick-release;
-                /delete-property/ ignore-modifiers;
+        sk: {
+            release-after-ms = <2000>;
+            quick-release;
+            /delete-property/ ignore-modifiers;
         };
     };
 
