@@ -56,6 +56,15 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
+        lt: layer-tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "layer-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <0>;
+            flavor = "hold-preferred";
+            bindings = <&mo>, <&kp>;
+        };
     };
 
     keymap {
@@ -64,7 +73,7 @@
         default_layer {
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-    &ht LG(C) LG(X)    &kp Q    &kp W         &kp F         &kp P          &kp B         &kp J         &kp L         &kp U         &kp Y         &kp SQT       &kp LG(SPACE)
+    &ht LG(X) LG(C)    &kp Q    &kp W         &kp F         &kp P          &kp B         &kp J         &kp L         &kp U         &kp Y         &kp SQT       &kp LG(SPACE)
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &kp LG(V)     &kp A         &kp R         &kp S         &hm LGUI T     &kp G         &kp M         &hm RGUI N    &kp E         &kp I         &kp O         &kp ENTER
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
