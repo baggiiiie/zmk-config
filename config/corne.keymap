@@ -20,6 +20,14 @@
 #define _BRIGHTNESS_CONTROL_  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  
 #define _SCREENSHOT_SHORTCUT_  &kp LS(LG(N2))    &kp LS(LG(N3))  &kp LS(LG(N4))
 
+
+&sk {
+    release-after-ms = <2000>;
+    quick-release;
+    /delete-property/ ignore-modifiers;
+};
+
+
 / {
     behaviors {
         mo_tog: behavior_mo_tog {
@@ -64,11 +72,6 @@
             quick-tap-ms = <0>;
             flavor = "hold-preferred";
             bindings = <&mo>, <&kp>;
-        };
-        sk: {
-            release-after-ms = <2000>;
-            quick-release;
-            /delete-property/ ignore-modifiers;
         };
     };
 
