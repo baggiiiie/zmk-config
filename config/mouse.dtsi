@@ -8,12 +8,12 @@
 
 &mwh {
   acceleration-exponent = <1>;      
-  time-to-max-speed-ms = <1500>;    
+  time-to-max-speed-ms = <1000>;    
   delay-ms = <0>;                   
 };
 
 #define U_MOUSE_MOVE_MAX 1250       
-#define U_MOUSE_SCROLL_MAX 80      
+#define U_MOUSE_SCROLL_MAX 60      
 
 #undef MOVE_UP
 #undef MOVE_DOWN
