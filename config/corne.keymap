@@ -58,7 +58,7 @@
             tapping-term-ms = <220>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+            bindings = <&sk>, <&kp>;
         };
         ht: normal_hold_tap {
             compatible = "zmk,behavior-hold-tap";
