@@ -8,6 +8,7 @@
 
 &mwh {
   acceleration-exponent = <0>;      
+  time-to-max-speed-ms = <1500>;    
   delay-ms = <0>;                   
 };
 
