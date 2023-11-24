@@ -32,7 +32,6 @@
     flavor = "balanced";
 };
 
-
 / {
     behaviors {
         mo_tog: behavior_mo_tog {
@@ -60,6 +59,13 @@
             flavor = "tap-preferred";
             bindings = <&sk>, <&kp>;
         };
+        td_caps: td_caps {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_CAPS_SHIFT";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&sk LSHFT>, <&caps_word>;
+        };
         ht: normal_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "normal_hold_tap";
@@ -83,7 +89,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &mo 3         &kp Z         &kp X         &kp C         &kp D         &kp V          &kp K         &kp H         &kp COMMA     &kp DOT       &kp FSLH      &mo_tog 4 4
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                              &mt LALT TAB  &mo 1        &meh MEH SPACE  &sk LSHFT     &lt 2 BSPC    &mt LCTRL ESC
+                                              &mt LALT TAB  &mo 1        &meh MEH SPACE  &td_caps      &lt 2 BSPC    &mt LCTRL ESC
 //                                           ╰─────────────┴─────────────┴─────────────╯╰─────────────┴─────────────┴─────────────╯
             >;
         };
