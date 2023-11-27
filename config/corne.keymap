@@ -75,9 +75,7 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
-    };
-
-    combos {
+        combos {
         compatible = "zmk,combos";
         combo_esc {
             timeout-ms = <50>;
@@ -92,6 +90,8 @@
             bindings = <&kp TAP>;
         }
     };
+    };
+
 
     keymap {
         compatible = "zmk,keymap";
