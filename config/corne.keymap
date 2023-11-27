@@ -82,17 +82,17 @@
         combo_esc {
             timeout-ms = <50>;
             key-positions = <2 3>;
-            global-quick-tap-ms = <75>;
+            // global-quick-tap-ms = <75>;
             bindings = <&kp ESC>;
         };
         combo_tap {
             timeout-ms = <50>;
             key-positions = <8 9>;
-            global-quick-tap-ms = <75>;
+            // global-quick-tap-ms = <75>;
             bindings = <&kp TAB>;
         };
     };
-    
+
     keymap {
         compatible = "zmk,keymap";
 
