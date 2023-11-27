@@ -87,7 +87,7 @@
         };
         combo_tap {
             timeout-ms = <50>;
-            key-positions = <26 27>;
+            key-positions = <8 9>;
             global-quick-tap-ms = <75>;
             bindings = <&kp TAP>;
         }
