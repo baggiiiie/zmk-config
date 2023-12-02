@@ -26,6 +26,11 @@
     quick-release;
     /delete-property/ ignore-modifiers;
 };
+&sl {
+    release-after-ms = <2000>;
+    quick-release;
+    /delete-property/ ignore-modifiers;
+};
 &lt {
     tapping-term-ms = <220>;
     quick-tap-ms = <0>;
@@ -34,6 +39,15 @@
 
 / {
     behaviors {
+        // single tap - sticky layer 
+        // double tap - tog
+        td_layer: tap_dance_layer_toggle {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_LAYER_TOGGLE";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&sl 4>, <&tog 4>;
+        };
         mo_tog: behavior_mo_tog {
             compatible = "zmk,behavior-hold-tap";
             label = "mo_tog";
@@ -105,7 +119,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &ht LSHFT LG(V)    &kp A    &hm LALT R    &hm LCTRL S   &hm LGUI T    &kp G          &kp M         &hm RGUI N    &hm RCTRL E   &hm RALT I    &kp O         &kp ENTER
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &mo 3         &kp Z         &kp X         &kp C         &kp D         &kp V          &kp K         &kp H         &kp COMMA     &kp DOT       &kp FSLH      &mo_tog 4 4
+    &mo 3         &kp Z         &kp X         &kp C         &kp D         &kp V          &kp K         &kp H         &kp COMMA     &kp DOT       &kp FSLH      &td_layer
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                               &mt LALT TAB  &mo 1        &meh MEH SPACE  &td_caps      &lt 2 BSPC    &mt LCTRL ESC
 //                                           ╰─────────────┴─────────────┴─────────────╯╰─────────────┴─────────────┴─────────────╯
