@@ -1,0 +1,22 @@
+/{
+   
+    combos {
+        compatible = "zmk,combos";
+        
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <2 3>;
+            // global-quick-tap-ms = <75>;
+            bindings = <&kp ESC>;
+        };
+
+        combo_tab {
+            timeout-ms = <50>;
+            key-positions = <8 9>;
+            // if a non-modifier is triggered <800ms before combo is pressed, combo won't be triggered
+            require-prior-idle-ms = <800>;  
+            // global-quick-tap-ms = <75>;
+            bindings = <&kp TAB>;
+        };
+    };
+}

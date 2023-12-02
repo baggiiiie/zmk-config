@@ -1,0 +1,72 @@
+ / {
+
+  behaviors {
+
+      // double to clear a bluetooth profile to avoid mistrigger
+      td_bluetooth: tap_dance_bluetooth {
+          compatible = "zmk,behavior-tap-dance";
+          label = "TAP_DANCE_BLUETOOTH";
+          #binding-cells = <0>;
+          tapping-term-ms = <200>;
+          bindings = <&none>, <&bt BT_CLR>;
+      };
+
+      // single tap - sticky layer 
+      // double tap - tog
+      td_layer: tap_dance_layer_toggle {
+          compatible = "zmk,behavior-tap-dance";
+          label = "TAP_DANCE_LAYER_TOGGLE";
+          #binding-cells = <0>;
+          tapping-term-ms = <200>;
+          bindings = <&sl 4>, <&tog 4>;
+      };
+
+      mo_tog: behavior_mo_tog {
+          compatible = "zmk,behavior-hold-tap";
+          label = "mo_tog";
+          #binding-cells = <2>;
+          flavor = "hold-preferred";
+          tapping-term-ms = <200>;
+          bindings = <&mo>, <&tog>;
+      };
+      
+      meh: behavior_meh {
+          compatible = "zmk,behavior-hold-tap";
+          label = "meh";
+          #binding-cells = <2>;
+          flavor = "tap-preferred";
+          tapping-term-ms = <200>;
+          quick-tap-ms = <300>; // if space is pressed again within 300ms,  holding would trigger space instead of meh
+          bindings = <&kp>, <&kp>;
+      };
+
+      hm: homerow_mods {
+          compatible = "zmk,behavior-hold-tap";
+          label = "HOMEROW_MODS";
+          #binding-cells = <2>;
+          tapping-term-ms = <220>;
+          quick-tap-ms = <0>;
+          flavor = "tap-preferred";
+          bindings = <&sk>, <&kp>;
+      };
+
+      td_caps: td_caps {
+          compatible = "zmk,behavior-tap-dance";
+          label = "TD_CAPS_SHIFT";
+          #binding-cells = <0>;
+          tapping-term-ms = <200>;
+          bindings = <&sk LSHFT>, <&caps_word>;
+      };
+
+      ht: normal_hold_tap {
+          compatible = "zmk,behavior-hold-tap";
+          label = "normal_hold_tap";
+          #binding-cells = <2>;
+          tapping-term-ms = <220>;
+          quick-tap-ms = <0>;
+          flavor = "balanced";
+          bindings = <&kp>, <&kp>;
+      };
+    };
+    
+};

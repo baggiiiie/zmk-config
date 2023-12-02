@@ -8,10 +8,11 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-#include "mouse.dtsi"
+#include "includes/mouse.dtsi"
+#include "includes/behaviors.dtsi"
+#include "includes/combos.dtsi"
 
 #define MEH LS(LC(LALT))
-
 
 #define _BT_SEL_KEYS_ &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &td_bluetooth
 #define _MEDIA_CONTROL_ &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_MUTE      &kp C_PLAY
@@ -39,84 +40,6 @@
 };
 
 / {
-    behaviors {
-        // double to clear a bluetooth profile to avoid mistrigger
-        td_bluetooth: tap_dance_bluetooth {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_BLUETOOTH";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&none>, <&bt BT_CLR>;
-        };
-        // single tap - sticky layer 
-        // double tap - tog
-        td_layer: tap_dance_layer_toggle {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_LAYER_TOGGLE";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&sl 4>, <&tog 4>;
-        };
-        mo_tog: behavior_mo_tog {
-            compatible = "zmk,behavior-hold-tap";
-            label = "mo_tog";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&mo>, <&tog>;
-        };
-        meh: behavior_meh {
-            compatible = "zmk,behavior-hold-tap";
-            label = "meh";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <300>; // if space is pressed again within 300ms,  holding would trigger space instead of meh
-            bindings = <&kp>, <&kp>;
-        };
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <220>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&sk>, <&kp>;
-        };
-        td_caps: td_caps {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_CAPS_SHIFT";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&sk LSHFT>, <&caps_word>;
-        };
-        ht: normal_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "normal_hold_tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <220>;
-            quick-tap-ms = <0>;
-            flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-        };
-        
-    };
-    combos {
-        compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <2 3>;
-            // global-quick-tap-ms = <75>;
-            bindings = <&kp ESC>;
-        };
-        combo_tab {
-            timeout-ms = <50>;
-            key-positions = <8 9>;
-            require-prior-idle-ms = <800>; // if a non-modifier is triggered <800ms before combo is pressed, combo won't be triggered 
-            // global-quick-tap-ms = <75>;
-            bindings = <&kp TAB>;
-        };
-    };
 
     keymap {
         compatible = "zmk,keymap";
