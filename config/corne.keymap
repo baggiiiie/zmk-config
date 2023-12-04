@@ -9,7 +9,8 @@
 #include <dt-bindings/zmk/keys.h>
 
 #include "includes/mouse.dtsi"
-#include "includes/behaviors.dtsi"
+#include "includes/behaviors_tapdances.dtsi"
+#include "includes/behaviors_holdtaps.dtsi"
 #include "includes/combos.dtsi"
 
 #define MEH LS(LC(LALT))

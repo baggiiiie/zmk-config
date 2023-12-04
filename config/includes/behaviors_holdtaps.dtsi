@@ -1,0 +1,45 @@
+ / {
+
+    behaviors {
+
+        mo_tog: behavior_mo_tog {
+            compatible = "zmk,behavior-hold-tap";
+            label = "mo_tog";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&tog>;
+        };
+      
+        meh: behavior_meh {
+            compatible = "zmk,behavior-hold-tap";
+            label = "meh";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <300>; // if space is pressed again within 300ms,  holding would trigger space instead of meh
+            bindings = <&kp>, <&kp>;
+        };
+
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&sk>, <&kp>;
+        };
+
+        ht: normal_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "normal_hold_tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+    
+};

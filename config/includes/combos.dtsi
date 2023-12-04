@@ -1,4 +1,4 @@
-/{
+/ {
    
     combos {
         compatible = "zmk,combos";
