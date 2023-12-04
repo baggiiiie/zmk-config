@@ -7,7 +7,7 @@
             timeout-ms = <50>;
             key-positions = <2 3>;
             // global-quick-tap-ms = <75>;
-            layer = <0>;
+            layers = <0>;
             bindings = <&kp ESC>;
         };
 
