@@ -28,6 +28,14 @@
             tapping-term-ms = <200>;
             bindings = <&sk LSHFT>, <&caps_word>;
         };
+
+        td_quotes: td_quotes {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_QUOTES";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp SQT>, <&kp DQT>;
+        }
     };
 
 };
