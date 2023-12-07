@@ -30,7 +30,7 @@
 };
 &sl {
     release-after-ms = <2000>;
-    quick-release;
+    // quick-release;
     /delete-property/ ignore-modifiers;
 };
 &lt {
