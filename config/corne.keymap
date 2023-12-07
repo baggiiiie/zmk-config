@@ -30,7 +30,14 @@
 };
 &sl {
     release-after-ms = <2000>;
+    
+    // quick-release enabled: sticky key is released when the next key is pressed
+    // disabled: sticky key is released when the next key is released
+    // in order to long press mouse keys, quick release should be disabled
     // quick-release;
+
+    // test if continue-list works for sticky layer
+    continue-list = <UNDERSCORE MINUS>;
     /delete-property/ ignore-modifiers;
 };
 &lt {
