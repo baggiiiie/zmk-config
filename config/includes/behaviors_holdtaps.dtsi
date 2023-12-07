@@ -27,6 +27,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <220>;
             quick-tap-ms = <0>;
+            require-prior-idle-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&sk>, <&kp>;
         };
@@ -36,7 +37,7 @@
             label = "normal_hold_tap";
             #binding-cells = <2>;
             tapping-term-ms = <220>;
-            quick-tap-ms = <0>;
+            quick-tap-ms = <100>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };

@@ -36,8 +36,8 @@
 &lt {
     tapping-term-ms = <220>;
     // quick tap lt twice to send backspace
-    quick-tap-ms = <300>;
-    flavor = "balanced";
+    quick-tap-ms = <220>;
+    flavor = "hold-preferred";
 };
 
 / {
