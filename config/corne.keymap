@@ -18,7 +18,6 @@
 
 #define _BT_SEL_KEYS_ &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &td_bluetooth
 #define _MEDIA_CONTROL_ &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_MUTE      &kp C_PLAY
-#define _HOME_ROW_SCROLL_ MOUSE_WH_R  MOUSE_WH_U  MOUSE_WH_D  MOUSE_WH_L  
 #define _HOME_ROW_ARROW_ &ht LA(LEFT) LEFT  &kp DOWN    &kp UP     &ht LA(RIGHT) RIGHT
 #define _BRIGHTNESS_CONTROL_  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  
 #define _SCREENSHOT_SHORTCUT_  &kp LS(LG(N2))    &kp LS(LG(N3))  &kp LS(LG(N4))
@@ -68,13 +67,13 @@
         lower_layer {
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-    &trans        &kp GRAVE     &kp LS(GRAVE)  &kp LBRC     &kp RBRC      &kp PIPE       &kp PLUS      &kp N7        &kp N8        &kp N9        &kp STAR      &trans
+    &none         &kp GRAVE     &kp LS(GRAVE)  &kp LBRC     &kp RBRC      &kp PIPE       &kp PLUS      &kp N7        &kp N8        &kp N9        &kp STAR      &none 
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &trans        &none         &kp LG(GRAVE)  &kp LPAR     &kp RPAR      &kp UNDER      &kp MINUS     &kp N4        &kp N5        &kp N6        &kp N0        &trans
+    &none         &none         &kp LG(GRAVE)  &kp LPAR     &kp RPAR      &kp UNDER      &kp MINUS     &kp N4        &kp N5        &kp N6        &kp N0        &none 
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &trans        &kp LC(LEFT)  &kp LC(RIGHT)  &kp LC(TAB)  &kp LG(TAB)   &kp BSLH       &kp EQUAL     &kp N1        &kp N2        &kp N3        &kp FSLH      &trans
+    &none         &kp LC(LEFT)  &kp LC(RIGHT)  &kp LC(TAB)  &kp LG(TAB)   &kp BSLH       &kp EQUAL     &kp N1        &kp N2        &kp N3        &kp FSLH      &none 
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                &trans       &trans       &trans         &trans        &kp LA(BSPC)  &kp DOT
+                                              &trans        &trans        &trans         &trans        &kp LA(BSPC)  &kp DOT
 //                                           ╰─────────────┴─────────────┴─────────────╯╰─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -82,41 +81,41 @@
         raise_layer {
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-    &trans        &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT      &kp CARET     &kp AMPS      &kp STAR      &kp SEMI      &kp COLON     &trans
+    &none         &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT      &kp CARET     &kp AMPS      &kp STAR      &kp SEMI      &kp COLON     &none 
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &trans        &none         &trans        &kp LBKT      &kp RBKT      &kp SQT                             _HOME_ROW_ARROW_                   &kp SQT       &trans
+    &none         &none         &none         &kp LBKT      &kp RBKT      &kp SQT                             _HOME_ROW_ARROW_                   &kp SQT       &none 
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &trans        &trans        &kp LCTRL     &kp LSHFT     &kp LGUI      &kp DQT        &kp END       &kp PAGE_DOWN  &kp PAGE_UP     &kp HOME   &kp DQT       &trans
+    &none         &none         &kp LCTRL     &kp LSHFT     &kp LGUI      &kp DQT        &kp END       &kp PAGE_DOWN  &kp PAGE_UP     &kp HOME   &kp DQT       &none 
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                              &trans        &kp RA(DEL)   &trans         &trans        &trans         &trans
+                                              &trans        &kp RA(DEL)   &trans         &trans        &trans        &trans 
 //                                           ╰─────────────┴─────────────┴─────────────╯╰─────────────┴─────────────┴─────────────╯
             >;
         };
 
-        layer_3 {
+        controls {
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-    &kp F11       &kp F1        &kp F2        &kp F3        &kp F4        &kp F5         &kp F6        &kp F7        &kp F8        &kp F9        &kp F10       &kp F12
+                                        _BT_SEL_KEYS_                                    &none         &none         &none         &none         &none         &none 
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &bootloader   &trans            _BRIGHTNESS_CONTROL_    &kp LG(MINUS)   &kp LG(EQUAL)                      _HOME_ROW_SCROLL_                  &trans        &trans
+    &bootloader   &none          _BRIGHTNESS_CONTROL_    &kp LG(MINUS)   &kp LG(EQUAL)   &none         &none         &none         &none         &none         &none 
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &trans        &kp LS(LG(N1))                  _MEDIA_CONTROL_                        &trans        &trans        &trans        &trans        &trans        &bootloader
+    &none         &kp LS(LG(N1))                  _MEDIA_CONTROL_                        &none         &none         &none         &none         &none         &bootloader
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                        _SCREENSHOT_SHORTCUT_            &trans        &trans        &trans
+                                                        _SCREENSHOT_SHORTCUT_            &trans        &trans        &trans 
 //                                           ╰─────────────┴─────────────┴─────────────╯╰─────────────┴─────────────┴─────────────╯
             >;
         };
 
-        layer_4 {
+        mouse {
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-    &trans        &trans        MOUSE_WH_D    MOUSE_MS_U    MOUSE_WH_U    &trans                                            _BT_SEL_KEYS_                               
+    &none         &none         MOUSE_WH_D    MOUSE_MS_U    MOUSE_WH_U    &none          &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &kp F6
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &trans        MOUSE_WH_R    MOUSE_MS_L    MOUSE_MS_D    MOUSE_MS_R    MOUSE_WH_L     &trans        &trans        &trans        &trans        &trans        &trans
+    &none         MOUSE_WH_R    MOUSE_MS_L    MOUSE_MS_D    MOUSE_MS_R    MOUSE_WH_L     &kp F7        &kp F8        &kp F9        &kp F10       &kp F11       &kp F12
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &trans        &trans        &trans        &trans        &trans        &trans         &trans        &trans        &trans        &trans        &trans        &trans
+    &none         &none         &none         &none         &none         &none          &none         &none         &none         &none         &none         &none 
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                              &trans        MOUSE_RCLK     MOUSE_LCLK    &trans        &trans        &trans
+                                              &none         MOUSE_RCLK    MOUSE_LCLK     &trans        &trans        &trans 
 //                                           ╰─────────────┴─────────────┴─────────────╯╰─────────────┴─────────────┴─────────────╯
             >;
         };
