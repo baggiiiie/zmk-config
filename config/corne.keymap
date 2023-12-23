@@ -14,6 +14,7 @@
 #include "includes/combos.dtsi"
 
 #define MEH LS(LC(LALT))
+#define LARK LG(LS(D))
 
 #define _BT_SEL_KEYS_ &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &td_bluetooth
 #define _MEDIA_CONTROL_ &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_MUTE      &kp C_PLAY
@@ -57,7 +58,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &ht LSHFT LG(V)    &kp A    &hm LALT R    &hm LCTRL S   &hm LGUI T    &kp G          &kp M         &hm RGUI N    &hm RCTRL E   &hm RALT I    &kp O         &kp ENTER
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &mo 3         &kp Z         &kp X         &kp C         &kp D         &kp V          &kp K         &kp H         &kp COMMA     &kp DOT       &kp FSLH      &kp RC(SPACE)
+    &layer_ht 3 LARK     &kp Z       &kp X    &kp C         &kp D         &kp V          &kp K         &kp H         &kp COMMA     &kp DOT       &kp FSLH      &kp RC(SPACE)
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                               &mt LGUI TAB  &lt 1 DEL     &meh MEH SPACE  &td_caps     &lt 2 BSPC    &mo_tog 4 4
 //                                           ╰─────────────┴─────────────┴─────────────╯╰─────────────┴─────────────┴─────────────╯
