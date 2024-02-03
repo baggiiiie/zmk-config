@@ -11,5 +11,21 @@
             bindings = <&kp ESC>;
         };
 
+         combo_underscore {
+            timeout-ms = <50>;
+            key-positions = <3 15>;
+            // global-quick-tap-ms = <75>;
+            layers = <0>;
+            bindings = <&kp UNDERSCORE>;
+        };
+
+         combo_hyphen {
+            timeout-ms = <50>;
+            key-positions = <4 16>;
+            // global-quick-tap-ms = <75>;
+            layers = <0>;
+            bindings = <&kp MINUS>;
+        };
+
     };
 };
