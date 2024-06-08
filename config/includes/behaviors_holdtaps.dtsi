@@ -21,6 +21,16 @@
             bindings = <&kp>, <&kp>;
         };
 
+        hyper: behavior_hyper {
+            compatible = "zmk,behavior-hold-tap";
+            label = "hyper";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <300>; 
+            bindings = <&kp>, <&kp>;
+        };
+
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
