@@ -7,7 +7,7 @@
             label = "SWAPPER_CMD";
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
-            ignored-key-positions = <LM4>;
+            ignored-key-positions = <LM3>;
         };
 
         ctrl_tab: swapper_ctrl {
@@ -15,7 +15,7 @@
             label = "SWAPPER_CTRL";
             #binding-cells = <0>;
             bindings = <&kt LCTRL>, <&kp TAB>, <&kt LCTRL>;
-            ignored-key-positions = <LM4>;
+            ignored-key-positions = <LM3>;
         };
     };
 
