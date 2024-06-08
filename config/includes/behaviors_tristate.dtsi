@@ -1,0 +1,13 @@
+/ {
+	   
+    behaviors {
+        swap: swapper {
+            compatible = "zmk,behavior-tri-state";
+            label = "SWAPPER";
+            #binding-cells = <0>;
+            bindings = <&kt LCTRL>, <&kp TAB>, <&kt LCTRL>;
+            ignored-key-positions = <LT2>;
+        };
+    };
+
+};
