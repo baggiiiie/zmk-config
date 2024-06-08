@@ -5,18 +5,25 @@
         
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <2 3>;
+            key-positions = <LT2 LT3>;
             // global-quick-tap-ms = <75>;
             layers = <0>;
             bindings = <&kp ESC>;
         };
 
-         combo_underscore {
+        combo_enter {
             timeout-ms = <50>;
-            key-positions = <3 15>;
+            key-positions = <LT1 LT2>;
             // global-quick-tap-ms = <75>;
             layers = <0>;
-            bindings = <&kp UNDERSCORE>;
+            bindings = <&kp ENTER>;
+        };
+
+         combo_tab {
+            timeout-ms = <30>;
+            key-positions = <LM2 LM3>;
+            layers = <0>;
+            bindings = <&kp TAB>;
         };
 
          combo_hyphen {
