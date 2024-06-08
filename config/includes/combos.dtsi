@@ -26,9 +26,17 @@
             bindings = <&kp TAB>;
         };
 
+         combo_underscore {
+            timeout-ms = <30>;
+            key-positions = <RM1 RM2>;
+            // global-quick-tap-ms = <75>;
+            layers = <0>;
+            bindings = <&kp UNDER>;
+        };
+			   
          combo_hyphen {
-            timeout-ms = <50>;
-            key-positions = <4 16>;
+            timeout-ms = <30>;
+            key-positions = <LM1 LM2>;
             // global-quick-tap-ms = <75>;
             layers = <0>;
             bindings = <&kp MINUS>;
