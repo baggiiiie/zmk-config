@@ -7,7 +7,7 @@ manifest:
   projects:
     - name: zmk
       remote: urob
-      revision: main-with-native-mouse
+      revision: mai
       import: app/west.yml
     - name: zmk-tri-state
       remote: dhruvinsh
