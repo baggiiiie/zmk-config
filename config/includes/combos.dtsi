@@ -17,6 +17,7 @@
             // global-quick-tap-ms = <75>;
             layers = <0>;
             bindings = <&kp ENTER>;
+            require-prior-idle-ms = <200>;
         };
 
          combo_tab {
@@ -24,6 +25,7 @@
             key-positions = <LM2 LM3>;
             layers = <0>;
             bindings = <&kp TAB>;
+            require-prior-idle-ms = <200>;
         };
 
          combo_underscore {
@@ -32,6 +34,7 @@
             // global-quick-tap-ms = <75>;
             layers = <0>;
             bindings = <&kp UNDER>;
+            require-prior-idle-ms = <100>;
         };
 			   
          combo_hyphen {
@@ -40,6 +43,7 @@
             // global-quick-tap-ms = <75>;
             layers = <0>;
             bindings = <&kp MINUS>;
+            require-prior-idle-ms = <100>;
         };
 
     };
