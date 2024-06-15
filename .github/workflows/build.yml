@@ -1,7 +1,8 @@
+name: Build zmk firmware
 on:
   push:
     paths:
-      - "config"
+      - "config/**"
   pull_request:
   workflow_dispatch:
 
