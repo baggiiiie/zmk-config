@@ -1,7 +1,7 @@
 layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
 layers:
   default:
-  - {t: Gui+ C, h: Gui+ X}
+  - {t: Copy, h: Cut}
   - Q
   - W
   - F
@@ -12,8 +12,8 @@ layers:
   - U
   - Y
   - '&td_quotes'
-  - {t: Gui+ SPACE, h: mouse}
-  - {t: Gui+ V, h: LSHFT}
+  - {t: Raycast, h: mouse}
+  - {t: Paste, h: LSHFT}
   - A
   - {t: R, h: LALT}
   - {t: S, h: LCTRL}
@@ -25,7 +25,7 @@ layers:
   - {t: I, h: RALT}
   - O
   - ENTER
-  - {t: Gui+Sft+ D, h: controls}
+  - {t: Some Shortcut, h: controls}
   - Z
   - X
   - C
@@ -36,17 +36,17 @@ layers:
   - ','
   - .
   - /
-  - Ctl+ SPACE
-  - {t: TAB, h: Gui+Sft+Ctl+ LALT}
+  - Lang
+  - {t: TAB, h: Hyper}
   - {t: DEL, h: lower}
-  - {t: SPACE, h: Sft+Ctl+ LALT}
+  - {t: SPACE, h: Meh}
   - '&td_caps'
   - {t: BSPC, h: raise}
   - {t: mouse, h: mouse}
   lower:
   - ''
   - '`'
-  - Sft+ `
+  - '~'
   - '{'
   - '}'
   - '|'
@@ -57,8 +57,8 @@ layers:
   - '*'
   - ''
   - ''
-  - Ctl+ LEFT
-  - Ctl+ RIGHT
+  - Left Display
+  - Right Display
   - (
   - )
   - _
@@ -69,10 +69,10 @@ layers:
   - '0'
   - ''
   - ''
-  - Gui+ `
-  - Sft+ TAB
-  - '&ctrl_tab'
-  - '&cmd_tab'
+  - Next Window
+  - Revert Swapper
+  - Window Swapper
+  - App Swapper
   - \
   - '='
   - '1'
@@ -223,7 +223,7 @@ combos:
   k: ENTER
   l: [default]
 - p: [15, 14]
-  k: {t: TAB, h: Alt+ LCTRL}
+  k: TAB
   l: [default]
 - p: [19, 20]
   k: _
