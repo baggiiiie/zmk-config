@@ -11,7 +11,8 @@ I figure it would be a good place to put some TODOs for improvement.
    1. Hence, it'd probably be great to add space, backspace, delete to key ignore
    - Another problem is, for normal typing, if i wanna type "publish_stop" this kinda words, i'd have to purposely pause before hitting the combos; i think - and _ are really more commonly used than (), so might switch - _ with ()
    - Or just find a better way to trigger combos without intentional pausing. As () are heavily used in writing codes too.
-  
+3. Other Combos
+   - I realize there're some keys that are kinda 'perfect' for combos, e.g., pb \ vd \ jl \ kh(only if i type khan), make them into combos?   
 
 
 ----  
