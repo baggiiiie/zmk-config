@@ -28,4 +28,5 @@ I figure it would be a good place to put some TODOs for improvement.
 ----  
 
 ### Keymap
+Keymap drawn by [Keymap Drawer](https://github.com/caksoylar/keymap-drawer/tree/v0.17.0)
 ![Corne Keymap](./keymap-drawer/corne.svg)
