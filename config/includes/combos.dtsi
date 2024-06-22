@@ -39,13 +39,13 @@
             require-prior-idle-ms = <300>;
         };
 
-		combo_repeat {
-            timeout-ms = <100>;  // as these 2 keys are less likely to mistrigger, longer timeout
-            key-positions = <RB2 RB3>;
+         combo_sleep {
+            timeout-ms = <50>;
+            key-positions = <RT1 RT2 RT3>;
             layers = <0>;
-            bindings = <&key_repeat>;
-            require-prior-idle-ms = <50>;
-		};
+            bindings = <&kp C_PWR>;
+            require-prior-idle-ms = <500>;
+        };
     };
 };
 
@@ -70,4 +70,13 @@
             bindings = <&kp MINUS>;
             require-prior-idle-ms = <300>;
         };
+
+		combo_repeat {
+            timeout-ms = <100>;  // as these 2 keys are less likely to mistrigger, longer timeout
+            key-positions = <RB2 RB3>;
+            layers = <0>;
+            bindings = <&key_repeat>;
+            require-prior-idle-ms = <50>;
+		};
+
 */ 

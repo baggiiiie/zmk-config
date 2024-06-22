@@ -1,9 +1,9 @@
 name: Build zmk firmware
 on:
   push:
-    branches: 
-      - main
-      - 'feature/**'
+    branches:
+      - master
+      - "feature/**"
     paths:
       - "config/**"
   pull_request:

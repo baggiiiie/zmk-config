@@ -29,7 +29,7 @@
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <300>; 
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp>, <&key_repeat>;
             require-prior-idle-ms = <200>;
         };
 
