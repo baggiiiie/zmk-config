@@ -1,14 +1,25 @@
+/*
+						KEY POSITIONS
+  ╭────────────────────────╮ ╭────────────────────────╮
+  │LT5 LT4 LT3 LT2 LT1 LT0 │ │ RT0 RT1 RT2 RT3 RT4 RT5│
+  │LM5 LM4 LM3 LM2 LM1 LM0 │ │ RM0 RM1 RM2 RM3 RM4 RM5│
+  │LB5 LB4 LB3 LB2 LB1 LB0 │ │ RB0 RB1 RB2 RB3 RB4 RB5│
+  ╰──────────╮ LH2 LH1 LH0 │ │ RH0 RH1 RH2 ╭──────────╯
+             ╰─────────────╯ ╰─────────────╯ 
+*/
+
 / {
    
     combos {
         compatible = "zmk,combos";
         
         combo_esc {
-            timeout-ms = <50>;
+            timeout-ms = <50>;  // all keys must be pressed within 'timeout-ms'
             key-positions = <LT2 LT3>;
             // global-quick-tap-ms = <75>;
             layers = <0>;
             bindings = <&kp ESC>;
+            require-prior-idle-ms = <50>;
         };
 
         combo_enter {
@@ -28,6 +39,20 @@
             require-prior-idle-ms = <300>;
         };
 
+		combo_repeat {
+            timeout-ms = <100>;  // as these 2 keys are less likely to mistrigger, longer timeout
+            key-positions = <RB2 RB3>;
+            layers = <0>;
+            bindings = <&key_repeat>;
+            require-prior-idle-ms = <50>;
+		};
+    };
+};
+
+
+/* 
+	Unused combos:
+			
          combo_underscore {
             timeout-ms = <30>;
             key-positions = <RM1 RM2>;
@@ -45,6 +70,4 @@
             bindings = <&kp MINUS>;
             require-prior-idle-ms = <300>;
         };
-
-    };
-};
+*/ 
