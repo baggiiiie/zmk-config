@@ -1,7 +1,7 @@
 layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
 layers:
   default:
-  - {t: Gui+ C, h: Gui+ X}
+  - {t: Gui(C), h: Gui(X)}
   - Q
   - W
   - F
@@ -12,8 +12,8 @@ layers:
   - U
   - Y
   - '&td_quotes'
-  - {t: Gui+ SPACE, h: mouse}
-  - {t: Gui+ V, h: LSHFT}
+  - {t: Gui(SPACE), h: mouse}
+  - {t: Gui(V), h: LSHFT}
   - A
   - {t: R, h: LALT}
   - {t: S, h: LCTRL}
@@ -25,7 +25,7 @@ layers:
   - {t: I, h: RALT}
   - O
   - ENTER
-  - {t: Gui+Sft+ D, h: controls}
+  - {t: Gui+Sft(D), h: controls}
   - Z
   - X
   - C
@@ -36,17 +36,17 @@ layers:
   - ','
   - .
   - /
-  - Ctl+ SPACE
-  - {t: TAB, h: Gui+Sft+Ctl+ LALT}
+  - Ctl(SPACE)
+  - {t: '&key_repeat', h: Gui+Sft+Ctl(LALT)}
   - {t: DEL, h: lower}
-  - {t: SPACE, h: Sft+Ctl+ LALT}
+  - {t: SPACE, h: MEH}
   - '&td_caps'
   - {t: BSPC, h: raise}
   - {t: mouse, h: mouse}
   lower:
   - ''
   - '`'
-  - Sft+ `
+  - '~'
   - ''
   - ''
   - ''
@@ -57,8 +57,8 @@ layers:
   - '*'
   - ''
   - ''
-  - Ctl+ LEFT
-  - Ctl+ RIGHT
+  - Ctl(LEFT)
+  - Ctl(RIGHT)
   - '-'
   - _
   - ''
@@ -69,8 +69,8 @@ layers:
   - '0'
   - ''
   - ''
-  - Gui+ `
-  - Sft+ TAB
+  - Gui(`)
+  - Sft(TAB)
   - '&ctrl_tab'
   - '&cmd_tab'
   - ''
@@ -84,7 +84,7 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Alt+ BSPC
+  - Alt(BSPC)
   - .
   raise:
   - ''
@@ -94,8 +94,8 @@ layers:
   - '}'
   - '|'
   - ''
-  - ''
-  - UP
+  - '&'
+  - '*'
   - ;
   - '"'
   - ''
@@ -105,10 +105,10 @@ layers:
   - (
   - )
   - '&'
-  - ''
-  - {t: LEFT, h: Alt+ LEFT}
+  - {t: LEFT, h: Alt(LEFT)}
   - DOWN
-  - {t: RIGHT, h: Alt+ RIGHT}
+  - UP
+  - {t: RIGHT, h: Alt(RIGHT)}
   - ':'
   - ''
   - ''
@@ -124,7 +124,7 @@ layers:
   - \
   - ''
   - {t: ▽, type: trans}
-  - AGr+ DEL
+  - Alt(DEL)
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
@@ -146,8 +146,8 @@ layers:
   - ''
   - BRIGHTNESS DEC
   - BRIGHTNESS INC
-  - Gui+ -
-  - Gui+ =
+  - Gui(-)
+  - Gui(=)
   - ''
   - ''
   - ''
@@ -155,7 +155,7 @@ layers:
   - ''
   - ''
   - {type: held}
-  - Sft+Gui+ 1
+  - Sft+Gui(1)
   - VOLUME DOWN
   - VOLUME UP
   - MUTE
@@ -166,9 +166,9 @@ layers:
   - ''
   - ''
   - '&bootloader'
-  - Sft+Gui+ 2
-  - Sft+Gui+ 3
-  - Sft+Gui+ 4
+  - Sft+Gui(2)
+  - Sft+Gui(3)
+  - Sft+Gui(4)
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -223,8 +223,10 @@ combos:
   k: ENTER
   l: [default]
 - p: [15, 14]
-  k: {t: TAB, h: Alt+ LCTRL}
+  k: {t: TAB, h: Alt(LCTRL)}
   l: [default]
-- p: [32, 33]
-  k: '&key_repeat'
+- p: [7, 8, 9]
+  k: PWR
   l: [default]
+  a: top
+  o: 0.03
