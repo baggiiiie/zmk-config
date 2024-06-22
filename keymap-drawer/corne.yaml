@@ -1,7 +1,7 @@
 layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
 layers:
   default:
-  - {t: Copy, h: Cut}
+  - {t: Gui+ C, h: Gui+ X}
   - Q
   - W
   - F
@@ -12,8 +12,8 @@ layers:
   - U
   - Y
   - '&td_quotes'
-  - {t: Raycast, h: mouse}
-  - {t: Paste, h: LSHFT}
+  - {t: Gui+ SPACE, h: mouse}
+  - {t: Gui+ V, h: LSHFT}
   - A
   - {t: R, h: LALT}
   - {t: S, h: LCTRL}
@@ -25,7 +25,7 @@ layers:
   - {t: I, h: RALT}
   - O
   - ENTER
-  - {t: Some Shortcut, h: controls}
+  - {t: Gui+Sft+ D, h: controls}
   - Z
   - X
   - C
@@ -36,20 +36,20 @@ layers:
   - ','
   - .
   - /
-  - Lang
-  - {t: TAB, h: Hyper}
+  - Ctl+ SPACE
+  - {t: TAB, h: Gui+Sft+Ctl+ LALT}
   - {t: DEL, h: lower}
-  - {t: SPACE, h: Meh}
+  - {t: SPACE, h: Sft+Ctl+ LALT}
   - '&td_caps'
   - {t: BSPC, h: raise}
   - {t: mouse, h: mouse}
   lower:
   - ''
   - '`'
-  - '~'
-  - '{'
-  - '}'
-  - '|'
+  - Sft+ `
+  - ''
+  - ''
+  - ''
   - +
   - '7'
   - '8'
@@ -57,11 +57,11 @@ layers:
   - '*'
   - ''
   - ''
-  - Left Display
-  - Right Display
-  - (
-  - )
+  - Ctl+ LEFT
+  - Ctl+ RIGHT
+  - '-'
   - _
+  - ''
   - '-'
   - '4'
   - '5'
@@ -69,11 +69,11 @@ layers:
   - '0'
   - ''
   - ''
-  - Next Window
-  - Revert Swapper
-  - Window Swapper
-  - App Swapper
-  - \
+  - Gui+ `
+  - Sft+ TAB
+  - '&ctrl_tab'
+  - '&cmd_tab'
+  - ''
   - '='
   - '1'
   - '2'
@@ -88,40 +88,40 @@ layers:
   - .
   raise:
   - ''
-  - '!'
-  - '@'
-  - '#'
   - $
-  - '%'
-  - ^
-  - '&'
-  - '*'
+  - '#'
+  - '{'
+  - '}'
+  - '|'
+  - ''
+  - ''
+  - UP
   - ;
   - '"'
   - ''
   - ''
-  - ''
-  - ''
-  - '['
-  - ']'
+  - '@'
+  - '!'
+  - (
+  - )
+  - '&'
   - ''
   - {t: LEFT, h: Alt+ LEFT}
   - DOWN
-  - UP
   - {t: RIGHT, h: Alt+ RIGHT}
   - ':'
   - ''
   - ''
-  - ''
-  - LCTRL
-  - LSHFT
-  - LGUI
-  - ''
+  - ^
+  - '%'
+  - '['
+  - ']'
+  - '*'
   - END
   - PAGE DOWN
   - PAGE UP
   - HOME
-  - ''
+  - \
   - ''
   - {t: ▽, type: trans}
   - AGr+ DEL
@@ -135,14 +135,14 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - '&bootloader'
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
   - {t: BT, h: '2'}
   - {t: BT, h: '3'}
   - {t: BT, h: '4'}
   - '&td_bluetooth'
-  - '&bootloader'
+  - ''
   - ''
   - BRIGHTNESS DEC
   - BRIGHTNESS INC
@@ -223,11 +223,8 @@ combos:
   k: ENTER
   l: [default]
 - p: [15, 14]
-  k: TAB
+  k: {t: TAB, h: Alt+ LCTRL}
   l: [default]
-- p: [19, 20]
-  k: _
-  l: [default]
-- p: [16, 15]
-  k: '-'
+- p: [32, 33]
+  k: '&key_repeat'
   l: [default]
