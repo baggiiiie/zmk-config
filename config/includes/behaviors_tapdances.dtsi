@@ -5,7 +5,6 @@
         // double to clear a bluetooth profile to avoid mistrigger
         td_bluetooth: tap_dance_bluetooth {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_BLUETOOTH";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&none>, <&bt BT_CLR>;
@@ -15,7 +14,6 @@
         // double tap - tog
         td_layer: tap_dance_layer_toggle {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_LAYER_TOGGLE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&sl 4>, <&tog 4>;
@@ -23,7 +21,6 @@
 
         td_caps: td_caps {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_CAPS_SHIFT";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&sk LSHFT>, <&caps_word>;
@@ -31,7 +28,6 @@
 
         td_quotes: td_quotes {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_QUOTES";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp SQT>, <&kp DQT>;

@@ -1,0 +1,232 @@
+layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
+layers:
+  default:
+  - {t: Gui(C), h: Gui(X)}
+  - Q
+  - W
+  - F
+  - P
+  - B
+  - J
+  - L
+  - U
+  - Y
+  - '&td_quotes'
+  - {t: Gui(SPACE), h: mouse}
+  - {t: Gui(V), h: LSHFT}
+  - A
+  - {t: R, h: LALT}
+  - {t: S, h: LCTRL}
+  - {t: T, h: LGUI}
+  - G
+  - M
+  - {t: N, h: RGUI}
+  - {t: E, h: RCTRL}
+  - {t: I, h: RALT}
+  - O
+  - ENTER
+  - {t: Gui+Sft(D), h: controls}
+  - Z
+  - X
+  - C
+  - D
+  - V
+  - K
+  - H
+  - ','
+  - .
+  - /
+  - Ctl(SPACE)
+  - {t: '&key_repeat', h: Gui+Sft+Ctl(LALT)}
+  - {t: DEL, h: lower}
+  - {t: SPACE, h: MEH}
+  - '&td_caps'
+  - {t: BSPC, h: raise}
+  - {t: mouse, h: mouse}
+  lower:
+  - ''
+  - '`'
+  - '~'
+  - ''
+  - ''
+  - ''
+  - +
+  - '7'
+  - '8'
+  - '9'
+  - '*'
+  - ''
+  - ''
+  - Ctl(LEFT)
+  - Ctl(RIGHT)
+  - '-'
+  - _
+  - ''
+  - '-'
+  - '4'
+  - '5'
+  - '6'
+  - '0'
+  - ''
+  - ''
+  - Gui(`)
+  - Sft(TAB)
+  - '&ctrl_tab'
+  - '&cmd_tab'
+  - ''
+  - '='
+  - '1'
+  - '2'
+  - '3'
+  - /
+  - ''
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Alt(BSPC)
+  - .
+  raise:
+  - ''
+  - $
+  - '#'
+  - '{'
+  - '}'
+  - '|'
+  - ''
+  - '&'
+  - '*'
+  - ;
+  - '"'
+  - ''
+  - ''
+  - '@'
+  - '!'
+  - (
+  - )
+  - '&'
+  - {t: LEFT, h: Alt(LEFT)}
+  - DOWN
+  - UP
+  - {t: RIGHT, h: Alt(RIGHT)}
+  - ':'
+  - ''
+  - ''
+  - ^
+  - '%'
+  - '['
+  - ']'
+  - '*'
+  - END
+  - PAGE DOWN
+  - PAGE UP
+  - HOME
+  - \
+  - ''
+  - {t: ▽, type: trans}
+  - Alt(DEL)
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  controls:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&bootloader'
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - '&td_bluetooth'
+  - ''
+  - ''
+  - BRIGHTNESS DEC
+  - BRIGHTNESS INC
+  - Gui(-)
+  - Gui(=)
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - Sft+Gui(1)
+  - VOLUME DOWN
+  - VOLUME UP
+  - MUTE
+  - PLAY
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&bootloader'
+  - Sft+Gui(2)
+  - Sft+Gui(3)
+  - Sft+Gui(4)
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  mouse:
+  - ''
+  - ''
+  - '&msc SCRL_DOWN'
+  - '&mmv MOVE_UP'
+  - '&msc SCRL_UP'
+  - ''
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - {t: F6, type: held}
+  - ''
+  - '&msc SCRL_RIGHT'
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
+  - '&mmv MOVE_RIGHT'
+  - '&msc SCRL_LEFT'
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
+  - F12
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&mkp RCLK'
+  - '&mkp LCLK'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+combos:
+- p: [3, 2]
+  k: ESC
+  l: [default]
+- p: [4, 3]
+  k: ENTER
+  l: [default]
+- p: [15, 14]
+  k: {t: TAB, h: Alt(LCTRL)}
+  l: [default]
+- p: [7, 8, 9]
+  k: PWR
+  l: [default]
+  a: top
+  o: 0.03
