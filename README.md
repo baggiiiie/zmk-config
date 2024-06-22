@@ -4,9 +4,16 @@ This is the zmk config for my corne.
 I figure it would be a good place to put some TODOs for improvement.  
 
 ### TODO
+4. Homerow combos
+   - Just remove homerow - and _ combos, already missing them.
+   - [ATTN!!]Now they're in another layer, feels like my thumb is doing a lot of work right now.
+  
+   
 3. Other Combos
    - I realize there're some keys that are kinda 'perfect' for combos, e.g., pb \ vd \ jl \ kh(only if i type khan), make them into combos?   
-   - [UPDATE]Added key repeat at ,. position for experiment.  
+   - [UPDATE]Added key repeat at ,. position for experiment.
+   - [UADATE]It's a weird position lol. 
+
 
 2. [DONE] ~~Combo Key Ignore~~
    - Solution: ditch - and _ combos completely, remap layers.  
