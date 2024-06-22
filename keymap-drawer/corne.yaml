@@ -59,8 +59,8 @@ layers:
   - ''
   - Ctl(LEFT)
   - Ctl(RIGHT)
-  - '-'
   - _
+  - '-'
   - ''
   - '-'
   - '4'
