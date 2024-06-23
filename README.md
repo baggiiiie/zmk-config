@@ -4,6 +4,9 @@ This is the zmk config for my corne.
 I figure it would be a good place to put some TODOs for improvement.  
 
 ### TODO
+5. Homerow mods prior idle time
+   - Increased required-prior-idle-time for homerow mods from 200 to 400, in order to have better rolling-typing experience, but seems like it's not really working that well. for using ctrl+a ctrl+e to jump to line start/end, it's fairly annoying
+   - might switch back to 200, or try 300
 4. Homerow combos
    - Just remove homerow - and _ combos, already missing them.
    - [ATTN!!]Now they're in another layer, feels like my thumb is doing a lot of work right now.
