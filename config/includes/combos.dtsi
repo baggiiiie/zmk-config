@@ -31,7 +31,7 @@
             require-prior-idle-ms = <200>;
         };
 
-         combo_tab {
+        combo_tab {
             timeout-ms = <30>;
             key-positions = <LM2 LM3>;
             layers = <0>;
@@ -39,13 +39,38 @@
             require-prior-idle-ms = <300>;
         };
 
-         combo_sleep {
+        combo_equal {
+            timeout-ms = <30>;
+            key-positions = <RM2 RM3>;
+            layers = <0>;
+            bindings = <&kp EQUAL>;
+            require-prior-idle-ms = <300>;
+        };
+
+        combo_ctrla {
+            timeout-ms = <50>;
+            key-positions = <LB2 LB3>;
+            layers = <0>;
+            bindings = <&kp LC(A)>;
+            require-prior-idle-ms = <200>;
+        };
+
+        combo_ctrle {
+            timeout-ms = <50>;
+            key-positions = <RB2 RB3>;
+            layers = <0>;
+            bindings = <&kp LC(E)>;
+            require-prior-idle-ms = <200>;
+        };
+
+        combo_sleep {
             timeout-ms = <50>;
             key-positions = <RT1 RT2 RT3>;
             layers = <0>;
             bindings = <&kp C_PWR>;
             require-prior-idle-ms = <500>;
         };
+        
     };
 };
 
