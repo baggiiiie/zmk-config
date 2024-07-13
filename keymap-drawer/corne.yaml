@@ -47,8 +47,8 @@ layers:
   - ''
   - '`'
   - '~'
-  - ''
-  - ''
+  - '|'
+  - +
   - ''
   - +
   - '7'
@@ -92,7 +92,7 @@ layers:
   - '#'
   - '{'
   - '}'
-  - '|'
+  - ''
   - ''
   - '&'
   - '*'
@@ -104,7 +104,7 @@ layers:
   - '!'
   - (
   - )
-  - '&'
+  - ''
   - {t: LEFT, h: Alt(LEFT)}
   - DOWN
   - UP
@@ -116,7 +116,7 @@ layers:
   - '%'
   - '['
   - ']'
-  - '*'
+  - ''
   - END
   - PAGE DOWN
   - PAGE UP
@@ -224,6 +224,21 @@ combos:
   l: [default]
 - p: [15, 14]
   k: {t: TAB, h: Alt(LCTRL)}
+  l: [default]
+- p: [20, 21]
+  k: {t: '=', h: Alt(RCTRL)}
+  l: [default]
+- p: [27, 26]
+  k: Ctl(A)
+  l: [default]
+- p: [32, 33]
+  k: Ctl(E)
+  l: [default]
+- p: [28, 27]
+  k: '&key_repeat'
+  l: [default]
+- p: [31, 32]
+  k: '&key_repeat'
   l: [default]
 - p: [7, 8, 9]
   k: PWR
