@@ -63,19 +63,11 @@
             require-prior-idle-ms = <200>;
         };
 
-		combo_repeat_left {
-            timeout-ms = <100>;  
-            key-positions = <LB1 LB2>;
-            layers = <0>;
-            bindings = <&key_repeat>;
-            require-prior-idle-ms = <50>;
-		};
-
-		combo_repeat_right {
-            timeout-ms = <100>;  
+		combo_ctrlk {
+            timeout-ms = <50>;  
             key-positions = <RB1 RB2>;
             layers = <0>;
-            bindings = <&key_repeat>;
+            bindings = <&kp LC(K)>;
             require-prior-idle-ms = <50>;
 		};
 
@@ -94,6 +86,14 @@
 /* 
 	Unused combos:
 			
+		combo_repeat_left {
+            timeout-ms = <100>;  
+            key-positions = <LB1 LB2>;
+            layers = <0>;
+            bindings = <&key_repeat>;
+            require-prior-idle-ms = <50>;
+		};
+
          combo_underscore {
             timeout-ms = <30>;
             key-positions = <RM1 RM2>;
