@@ -83,7 +83,7 @@
             timeout-ms = <50>;
             key-positions = <RT1 RT2 RT3>;
             layers = <0>;
-            bindings = <&kp C_PWR>;
+            bindings = <&kp C_AL_LOCK>;
             require-prior-idle-ms = <500>;
         };
         
