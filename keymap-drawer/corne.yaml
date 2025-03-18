@@ -1,4 +1,4 @@
-layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
+layout: {zmk_keyboard: corne}
 layers:
   default:
   - {t: Gui(C), h: Gui(X)}
@@ -19,7 +19,7 @@ layers:
   - {t: S, h: LCTRL}
   - {t: T, h: LGUI}
   - G
-  - M
+  - {t: M, h: mouse}
   - {t: N, h: RGUI}
   - {t: E, h: RCTRL}
   - {t: I, h: RALT}
@@ -200,8 +200,8 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - ''
+  - AC ZOOM IN
+  - AC ZOOM OUT
   - ''
   - ''
   - ''
