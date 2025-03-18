@@ -2,14 +2,14 @@
 	   
     behaviors {
 			  
-        cmd_tab: swapper_cmd {
+        cmd_tab: swapper {
             compatible = "zmk,behavior-tri-state";
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
             ignored-key-positions = <LB3>;
         };
 
-        ctrl_tab: swapper_ctrl {
+        ctrl_tab: swapper {
             compatible = "zmk,behavior-tri-state";
             #binding-cells = <0>;
             bindings = <&kt LCTRL>, <&kp TAB>, <&kt LCTRL>;
