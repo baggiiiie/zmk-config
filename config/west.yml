@@ -1,11 +1,32 @@
+# had 'lack bindings' issue with tri-state
+# trying out solution from here: https://discord.com/channels/719497620560543766/1318136932328542208/1318142040751738911
+
 manifest:
+  defaults:
+    remote: urob
+    revision: v0.2 # Pin everything to v0.2
+
   remotes:
     - name: urob
       url-base: https://github.com/urob
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+
   projects:
     - name: zmk
-      remote: urob
-      revision: main
+      remote: zmkfirmware
       import: app/west.yml
+
+    # ZMK modules
+    - name: zmk-adaptive-key
+      path: modules/zmk/adaptive-key
+    - name: zmk-auto-layer
+      path: modules/zmk/auto-layer
+    - name: zmk-helpers
+      path: modules/zmk/helpers
+    - name: zmk-leader-key
+      path: modules/zmk/leader-key
+    - name: zmk-tri-state
+      path: modules/zmk/tri-state
   self:
     path: config
