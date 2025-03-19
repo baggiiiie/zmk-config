@@ -148,30 +148,30 @@ layers:
   - BRIGHTNESS INC
   - Gui(-)
   - Gui(=)
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
+  - F12
   - {type: held}
   - Sft+Gui(1)
   - VOLUME DOWN
   - VOLUME UP
   - MUTE
-  - PLAY
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - '&bootloader'
+  - PLAY PAUSE
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
   - Sft+Gui(2)
   - Sft+Gui(3)
   - Sft+Gui(4)
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&bootloader'
   mouse:
   - ''
   - ''
@@ -179,24 +179,24 @@ layers:
   - '&mmv MOVE_UP'
   - '&msc SCRL_UP'
   - ''
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - {t: F6, type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
   - ''
   - '&msc SCRL_RIGHT'
   - '&mmv MOVE_LEFT'
   - '&mmv MOVE_DOWN'
   - '&mmv MOVE_RIGHT'
   - '&msc SCRL_LEFT'
-  - F7
-  - F8
-  - F9
-  - F10
-  - F11
-  - F12
+  - ''
+  - RGUI
+  - ''
+  - ''
+  - ''
+  - ''
   - ''
   - ''
   - ''

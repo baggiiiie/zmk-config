@@ -1,20 +1,20 @@
 #include <dt-bindings/zmk/mouse.h>
 
 &mmv {
-  acceleration-exponent = <1>;      
-  time-to-max-speed-ms = <1000>;    
-  delay-ms = <0>;                   
+  acceleration-exponent = <1>;
+  time-to-max-speed-ms = <1000>;
+  delay-ms = <0>;
 };
 
 &msc {
-  acceleration-exponent = <0>;      
-  delay-ms = <0>;                   
+  acceleration-exponent = <0>;
+  delay-ms = <0>;
 };
 
 #undef ZMK_MOUSE_DEFAULT_MOVE_VAL
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 2500
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 4000
 #undef ZMK_MOUSE_DEFAULT_SCRL_VAL
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 40
 
 #define MOUSE_LCLK &mkp LCLK
 #define MOUSE_RCLK &mkp RCLK
@@ -26,5 +26,6 @@
 #define MOUSE_WH_D &msc SCRL_DOWN
 #define MOUSE_WH_L &msc SCRL_LEFT
 #define MOUSE_WH_R &msc SCRL_RIGHT
+// zoom in and out currently unuseable
 #define ZOOM_IN &kp C_AC_ZOOM_IN
 #define ZOOM_OUT &kp C_AC_ZOOM_OUT

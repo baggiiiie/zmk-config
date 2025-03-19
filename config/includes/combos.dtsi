@@ -9,10 +9,10 @@
 */
 
 / {
-   
+
     combos {
         compatible = "zmk,combos";
-        
+
         combo_esc {
             timeout-ms = <50>;  // all keys must be pressed within 'timeout-ms'
             key-positions = <LT2 LT3>;
@@ -63,7 +63,7 @@
             require-prior-idle-ms = <200>;
         };
 
-		combo_ctrlk {
+        combo_ctrlk {
             timeout-ms = <50>;  
             key-positions = <RB1 RB2>;
             layers = <0>;

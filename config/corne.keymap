@@ -20,7 +20,7 @@
 #define LARK LG(LS(D))
 
 #define _BT_SEL_KEYS_ 			&bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &td_bluetooth
-#define _MEDIA_CONTROL_ 		&kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_MUTE      &kp C_PLAY
+#define _MEDIA_CONTROL_ 		&kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE  &kp C_PLAY_PAUSE
 #define _HOME_ROW_ARROW_		&ht LA(LEFT) LEFT  &kp DOWN  &kp UP  &ht LA(RIGHT) RIGHT
 #define _BRIGHTNESS_CONTROL_	&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  
 #define _SCREENSHOT_SHORTCUT_   &kp LS(LG(N2))    &kp LS(LG(N3))  &kp LS(LG(N4))
@@ -58,7 +58,7 @@
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
      &ht LG(X) LG(C)    &kp Q    &kp W         &kp F         &kp P         &kp B          &kp J         &kp L         &kp U         &kp Y         &td_quotes    &lt 4 LG(SPACE)
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &ht LSHFT LG(V)    &hm LSHFT A  &hm LALT R  &hm LCTRL S  &hm LGUI T   &kp G          &lt 4 M       &hm RGUI N    &hm RCTRL E   &hm RALT I    &hm RSHFT O   &kp ENTER
+     &ht LSHFT LG(V)    &hm LSHFT A  &hm LALT R  &hm LCTRL S  &hm LGUI T   &kp G         &layer_ht 4 M  &hm RGUI N    &hm RCTRL E   &hm RALT I    &hm RSHFT O   &kp ENTER
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &layer_ht 3 LARK   &kp Z    &kp X         &kp C         &kp D         &kp V          &kp K         &kp H         &kp COMMA     &kp DOT       &kp FSLH      &kp RC(SPACE)
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
@@ -98,13 +98,13 @@
         controls {
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &none         &none         &none         &none         &none         &bootloader                                    _BT_SEL_KEYS_                                     
+     &none         &none         &none         &none         &none         &bootloader                                    _BT_SEL_KEYS_
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &none         &none           _BRIGHTNESS_CONTROL_     &kp LG(MINUS)  &kp LG(EQUAL)  &none         &none         &none         &none         &none         &none 
+     &none         &none           _BRIGHTNESS_CONTROL_     &kp LG(MINUS)  &kp LG(EQUAL)  &kp F7        &kp F8        &kp F9        &kp F10       &kp F11       &kp F12
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &none         &kp LS(LG(N1))                  _MEDIA_CONTROL_                        &none         &none         &none         &none         &none         &bootloader
+     &none         &kp LS(LG(N1))                  _MEDIA_CONTROL_                        &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &kp F6
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                        _SCREENSHOT_SHORTCUT_             &trans        &trans        &trans 
+                                                        _SCREENSHOT_SHORTCUT_             &trans        &trans        &bootloader 
 //                                           ╰─────────────┴─────────────┴─────────────╯╰─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -112,11 +112,11 @@
         mouse {
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &none         &none         MOUSE_WH_D    MOUSE_MS_U    MOUSE_WH_U    &none          &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &kp F6
+     &none         &none         MOUSE_WH_D    MOUSE_MS_U    MOUSE_WH_U    &none          &none         &none         &none         &none         &none         &none
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &none         MOUSE_WH_R    MOUSE_MS_L    MOUSE_MS_D    MOUSE_MS_R    MOUSE_WH_L     &kp F7        &kp F8        &kp F9        &kp F10       &kp F11       &kp F12
+     &none         MOUSE_WH_R    MOUSE_MS_L    MOUSE_MS_D    MOUSE_MS_R    MOUSE_WH_L     &none         &kp RGUI      &none         &none         &none         &none
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &none         &none         &none          ZOOM_OUT      ZOOM_IN      &none          &none         &none         &none         &none         &none         &none 
+     &none         &none         &none          ZOOM_OUT      ZOOM_IN      &none          &none         &none         &none         &none         &none         &none
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                &none         MOUSE_RCLK    MOUSE_LCLK     &trans        &trans        &trans 
 //                                           ╰─────────────┴─────────────┴─────────────╯╰─────────────┴─────────────┴─────────────╯
