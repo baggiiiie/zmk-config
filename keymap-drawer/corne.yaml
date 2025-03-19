@@ -19,7 +19,7 @@ layers:
   - {t: S, h: LCTRL}
   - {t: T, h: LGUI}
   - G
-  - M
+  - {t: M, h: mouse}
   - {t: N, h: RGUI}
   - {t: E, h: RCTRL}
   - {t: I, h: RALT}
@@ -200,8 +200,8 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - ''
+  - AC ZOOM OUT
+  - AC ZOOM IN
   - ''
   - ''
   - ''

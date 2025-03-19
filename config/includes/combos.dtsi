@@ -36,7 +36,7 @@
             key-positions = <LM2 LM3>;
             layers = <0>;
             bindings = <&hm LA(LCTRL) TAB>;
-            require-prior-idle-ms = <300>;
+            require-prior-idle-ms = <150>;
         };
 
         combo_equal {
